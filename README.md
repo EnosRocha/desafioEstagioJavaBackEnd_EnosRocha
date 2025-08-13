@@ -41,7 +41,7 @@ Main features:
 ## Getstarted
 
 1. First step : Clone the project from github
-  ```bash git clone git@github.com:EnosRocha/desafioEstagioJavaBackEnd_EnosRocha.git ```
+  - ```bash git clone git@github.com:EnosRocha/desafioEstagioJavaBackEnd_EnosRocha.git ```
 
 
 
