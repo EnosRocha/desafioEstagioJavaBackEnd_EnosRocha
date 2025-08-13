@@ -72,6 +72,13 @@ Onde the project is running:
   - Use the provided endpoints for managing tasks
 
 ## Endpoints
+| Method | Endpoint          | Description       | Auth Required |
+| ------ | ----------------- | ----------------- | ------------- |
+| POST   | `/task/create`    | Create a new task | ✅            |
+| GET    | `/task/get`       | List all tasks    | ✅            |
+| PUT    | `/task//updatetask/{id}` | Update a task     | ✅             |
+| DELETE | `/task/tasks/{id}` | Delete a task     | ✅             |
+| POST   | `/
 
 
 
