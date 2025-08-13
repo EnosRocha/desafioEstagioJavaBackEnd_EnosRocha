@@ -52,6 +52,8 @@ Main features:
       jpa:
         hibernate:
           ddl-auto: update ```
+
+    
     - **OBS: remeber of passing this edited information in the docker-compose.yml, the same way they are written in the properties.yml **
 3. Second step: Build the docker container up in the project terminal
   - ``` bash docker compose up ```
