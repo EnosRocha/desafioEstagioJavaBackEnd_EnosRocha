@@ -38,7 +38,7 @@ Main features:
 
 ---
 
-## Get started
+## Getstarted
 
 
 
