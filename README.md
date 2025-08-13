@@ -7,7 +7,7 @@ This is a API RESTful for task management. The project is written in java using 
 1. [Description](#description)
 2. [Tecnologies](#tecnologies)
 3. [Get Started](#getstarted)
-4. [How to Use it](#howtouseit)
+4. [How to Use it](#how-to-use-it)
 5. [Endpoints](#endpoints)
 
 ---
