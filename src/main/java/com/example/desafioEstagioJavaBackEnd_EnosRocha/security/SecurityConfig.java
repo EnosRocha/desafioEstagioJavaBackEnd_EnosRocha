@@ -112,7 +112,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .formLogin(form ->
-                        form.defaultSuccessUrl("/token/", true));
+                        form.defaultSuccessUrl("http://localhost:8080/swagger-ui/index.html", true));
 
         return http.build();
     }

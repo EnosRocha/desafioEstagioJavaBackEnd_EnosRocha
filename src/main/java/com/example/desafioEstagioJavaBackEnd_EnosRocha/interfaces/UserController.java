@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ import org.w3c.dom.ranges.RangeException;
 
 @RestController
 @RequestMapping("/user")
+@Tag(name = "user-controller", description = "End-point for user creation")
 public class UserController {
 
     private final UserServices userServices;
@@ -34,7 +36,7 @@ public class UserController {
             @ApiResponse(responseCode = "400", description = "Invalid DTO for creating user")
     })
     public ResponseEntity createNewUserController(
-            @Parameter(description = "DTO caontaining data for creating a new user ")
+            @Parameter(description = "DTO containing data for creating a new user ")
             @Valid @RequestBody CreateNewUser createNewUser) {
         User user = userServices.createNewUserService(createNewUser);
         return user != null ? ResponseEntity.status(HttpStatus.CREATED).build() : ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
