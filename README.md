@@ -6,7 +6,7 @@ This is a API RESTful for task management. The project is written in java using 
 ## Sumary
 1. [Description](#description)
 2. [Tecnologies](#tecnologies)
-3. [Get Started](#getstarted)
+3. [Get Started](#get-started)
 4. [How to Use it](#how-to-use-it)
 5. [Endpoints](#endpoints)
 
@@ -38,7 +38,7 @@ Main features:
 
 ---
 
-## Getstarted
+## Get started
 
 1. First step : Clone the project from github
   - ```bash git clone git@github.com:EnosRocha/desafioEstagioJavaBackEnd_EnosRocha.git ```
