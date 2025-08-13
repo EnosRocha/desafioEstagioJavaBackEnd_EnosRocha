@@ -1,5 +1,5 @@
 # Task manager project - by Enos Rocha 📌
-This is a manager task project written in java using spring boot as the main framework.
+This is a API RESTful for task management. The project is written in java using spring boot as the main. framework.
 
 ---
 
@@ -9,6 +9,18 @@ This is a manager task project written in java using spring boot as the main fra
 3. [Get Started](#getstarted)
 4. [Docker](#docker)
 5. [Endpoints](#endpoints)
+
+---
+
+## Description
+The objective is provide a efficient solution for the task management problem in a safe and simples way.
+
+Main features:
+- CRUD
+- Filter for filtering task by status, priority and deadline
+- Authorization and authentication using JWT
+- Database provided by a docker compose (ISOLATED in the ROOT of the project for deploy)
+- Documentation with sweagger
 
 ---
 
@@ -25,6 +37,7 @@ This is a manager task project written in java using spring boot as the main fra
 - JPA / Hibernate
 
 ---
+
 
 
 
