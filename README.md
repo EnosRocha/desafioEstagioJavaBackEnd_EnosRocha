@@ -67,6 +67,7 @@ Main features:
 ## How to use it
 Onde the project is running: 
   - Access Swagger UI at: http://localhost:8080/swagger-ui.html
+  - For the first access the back-end will request user and password, type admin for both.
   - Create a new User so can receive a JWT token that will be used in others endpoint
   - Authenticate with JWT token to use protected endpoints
   - Use the provided endpoints for managing tasks
