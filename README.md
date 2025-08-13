@@ -78,7 +78,7 @@ Onde the project is running:
 | GET    | `/task/get`       | List all tasks    | ✅            |
 | PUT    | `/task//updatetask/{id}` | Update a task     | ✅             |
 | DELETE | `/task/deletetask` | Delete a task    | ✅            |
-| POST   | `/user            | Create a new User | ✅            |
+| POST   | `/user`            | Create a new User | ✅            |
 
 
 
