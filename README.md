@@ -56,7 +56,8 @@ Main features:
     
   - **OBS**: remeber of passing this edited information in the docker-compose.yml, the same way they are written in the properties.yml 
 3. Third step: Build the docker container up in the project terminal
-    ``` bash docker compose up ```
+    ``` bash
+    docker compose up 
 4. Fourth: Run the project using maven
    ```bash
     mvn spring-boot:run 
@@ -64,7 +65,13 @@ Main features:
 ---
 
 ## How to use it
+Onde the project is running: 
+  - Access Swagger UI at: http://localhost:8080/swagger-ui.html
+  - Create a new User so can receive a JWT token that will be used in others endpoint
+  - Authenticate with JWT token to use protected endpoints
+  - Use the provided endpoints for managing tasks
 
+## Endpoints
 
 
 
