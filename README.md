@@ -7,7 +7,7 @@ This is a API RESTful for task management. The project is written in java using 
 1. [Description](#description)
 2. [Tecnologies](#tecnologies)
 3. [Get Started](#getstarted)
-4. [Docker](#docker)
+4. [How to Use it](#how to use it)
 5. [Endpoints](#endpoints)
 
 ---
@@ -60,6 +60,12 @@ Main features:
 4. Fourth: Run the project using maven
    ```bash
     mvn spring-boot:run 
+
+---
+
+## How to use it
+
+
 
 
 
