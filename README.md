@@ -42,7 +42,18 @@ Main features:
 
 1. First step : Clone the project from github
   - ```bash git clone git@github.com:EnosRocha/desafioEstagioJavaBackEnd_EnosRocha.git ```
-
+2. Second step: adjust the properties.yml editing the database information
+  - ```yml
+    spring:
+      datasource:
+        url: jdbc:mysql://localhost:3310/{DATABASENAME}
+        username: {YOURNAME}
+        password: {YOUR PASSWORD}
+      jpa:
+        hibernate:
+          ddl-auto: update ```
+3. Second step: Build the docker container up in the project terminal
+  - ``` bash docker compose up ```
 
 
 
