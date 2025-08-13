@@ -54,9 +54,12 @@ Main features:
           ddl-auto: update ```
 
     
-  - **OBS: remeber of passing this edited information in the docker-compose.yml, the same way they are written in the properties.yml **
-3. Second step: Build the docker container up in the project terminal
+  - **OBS**: remeber of passing this edited information in the docker-compose.yml, the same way they are written in the properties.yml 
+3. Third step: Build the docker container up in the project terminal
   - ``` bash docker compose up ```
+4. Fourth: Run the project using maven
+  - ```bash
+    mvn spring-boot:run ```
 
 
 
