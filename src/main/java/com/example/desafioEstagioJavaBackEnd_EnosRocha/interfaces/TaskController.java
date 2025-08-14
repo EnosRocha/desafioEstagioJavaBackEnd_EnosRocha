@@ -64,9 +64,9 @@ public class TaskController {
 
 
     @GetMapping("/getauthenticateduser")
-    @Operation(summary = "Get all task assingned to a user", description = "To take the information that the token contains and extract the userName to pass it as parameter to a JPA query in the repository")
+    @Operation(summary = "Get all task by user", description = "To take the information that the token contains and extract the userName to pass it as parameter to a JPA query in the repository")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Tasks have been found"),
+            @ApiResponse(responseCode = "200", description = "Tasks were found"),
             @ApiResponse(responseCode = "401", description = "User has not been authenticated")
     })
     public ResponseEntity<List<Task>> getTaskByAuthenticatedUserController(
