@@ -83,6 +83,17 @@ public class TaskService {
     }
 
     @Transactional
+    public List<Task> getTaskByAuthenticatedUser(String name) {
+        if (name == null || name.isEmpty()) {
+
+            throw new IllegalArgumentException("userName cant be null or empty");
+        }
+        return taskRepository.finbByUser(name);
+
+
+    }
+
+    @Transactional
     public Task updateTask(Long id, UpdateTask updateTask) {
         Optional<Task> task = taskRepository.findById(id);
         if (!task.isPresent()) {

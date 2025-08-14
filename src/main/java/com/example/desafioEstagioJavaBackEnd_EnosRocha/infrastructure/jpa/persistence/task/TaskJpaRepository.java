@@ -17,6 +17,11 @@ public interface TaskJpaRepository extends JpaRepository<TaskEntity, Long> {
 
     Optional<TaskEntity> findByName(String name);
 
+
+
+
+    List<TaskEntity> findByUser(@Param("name") String name);
+
     @Transactional
     @Modifying
     @Query("""

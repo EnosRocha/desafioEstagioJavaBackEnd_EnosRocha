@@ -54,4 +54,9 @@ public class TaskRepositoryImpl implements TaskRepository {
         }
         return 0;
     }
+
+    @Override
+    public List<Task> finbByUser(String name) {
+        return taskRepository.findByUser(name).stream().map(taskEntityMapper::toDomain).toList();
+    }
 }

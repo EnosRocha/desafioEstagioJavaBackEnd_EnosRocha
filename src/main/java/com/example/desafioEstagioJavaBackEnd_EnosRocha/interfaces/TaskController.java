@@ -8,9 +8,13 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -18,6 +22,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("task")
+@Tag(name = "task-controller")
 public class TaskController {
 
     private final TaskService taskService;
@@ -57,6 +62,24 @@ public class TaskController {
         return ResponseEntity.status(HttpStatus.OK).body(taskLIst);
     }
 
+
+    @GetMapping("/getauthenticateduser")
+    @Operation(summary = "Get all task assingned to a user", description = "To take the information that the token contains and extract the userName to pass it as parameter to a JPA query in the repository")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Tasks have been found"),
+            @ApiResponse(responseCode = "401", description = "User has not been authenticated")
+    })
+    public ResponseEntity<List<Task>> getTaskByAuthenticatedUserController(
+            @Parameter(description = "Pass the token information as a userDetails to allow to taking the userName")
+            @AuthenticationPrincipal UserDetails authentication) {
+        if (authentication == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+        String responsibleUser = authentication.getUsername();
+        List<Task> response = taskService.getTaskByAuthenticatedUser(responsibleUser);
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+
+    }
 
     @PutMapping("/updatetask/{id}")
     @Operation(summary = "Update task by id", description = "Update a specific task through the given id the url(as a pathvariable)")
