@@ -1,5 +1,5 @@
 # Task manager project - by Enos Rocha 📌
-This is a API RESTful for task management. The project is written in java using spring boot as the main. framework.
+This is a API RESTful for task management. The project is written in java using spring boot as the main framework.
 
 ---
 
@@ -14,6 +14,9 @@ This is a API RESTful for task management. The project is written in java using 
 
 ## Description
 The objective is provide a efficient solution for the task management problem in a safe and simples way.
+
+For a clean and scalable code was a dopted a DOMAIN-DRIVEN-DESIGN(DDD), so the code is completly decoupled and even though the main framework be changed the business rules could be preserved untouched. 
+
 
 Main features:
 - CRUD
