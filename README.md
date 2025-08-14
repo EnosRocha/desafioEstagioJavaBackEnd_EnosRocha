@@ -20,7 +20,7 @@ Main features:
 - Filter for filtering task by status, priority and deadline
 - Authorization and authentication using JWT
 - Database provided by a docker compose (ISOLATED in the ROOT of the project for deploy)
-- Documentation with sweagger
+- Documentation with swagger
 
 ---
 
